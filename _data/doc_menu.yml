@@ -20,35 +20,35 @@
   children:
     - name: "Introduction"
       link: "/documentation/core_modules/introduction"
-    - name: admin
+    - name: Admin
       link:
-    - name: auth
+    - name: Auth
       link:
-    - name: channels
+    - name: Channels
       link:
-    - name: favorite
+    - name: Favorite
       link:
-    - name: file
+    - name: File
       link:
-    - name: form
+    - name: Form
       link:
-    - name: help
+    - name: Help
       link:
-    - name: inbox
+    - name: Inbox
       link:
-    - name: install
+    - name: Install
       link:
-    - name: main
+    - name: Main
       link:
-    - name: report
+    - name: Report
+      link: "/documentation/core_modules/report/report"
+    - name: Search
       link:
-    - name: search
+    - name: Tag
       link:
-    - name: tag
+    - name: Task
       link:
-    - name: task
-      link:
-    - name: timelog
+    - name: Timelog
       link:
 - name: "Cmfive Tests"
   children:
