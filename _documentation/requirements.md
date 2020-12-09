@@ -20,4 +20,3 @@ Cmfive requires the following PHP extensions:
 - Readline
 - XML
 - ZIP
-

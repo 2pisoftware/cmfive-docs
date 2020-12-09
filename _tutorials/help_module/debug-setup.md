@@ -17,7 +17,7 @@ Now open the Debug menu. You should see several sections in this menu listed as 
 
 BREAKPOINTS will include the options Notices, Warnings, Errors, Exceptions, and Everything with checkboxes next to them. By default, Everything should be checked, and in most cases, this is what you will use.
 
-To check a piece of code, you will need to create you own breakpoint. Let's use our index.php file to practice. If you haven't yet created one, follow the tutorial under the [Learning Cmfive menu](tutorials/anatomy_module/introduction).
+To check a piece of code, you will need to create you own breakpoint. Let's use our index.php file to practice. If you haven't yet created one, follow the tutorial under the [Learning Cmfive menu](tutorials/module-anatomy/introduction).
 
 Go back to the explorer menu (picture of two pages laying on top of each other) on the left, and choose your index.php file. See line 3:
 ```php

@@ -9,17 +9,17 @@
 - name: "The Anatomy of Cmfive"
   children:
     - name: "The Boilerplate"
-      link: "/documentation/cmfive_boilerplate/introduction"
+      link: "/documentation/cmfive-boilerplate/introduction"
     - name: "The Cmfive Core"
-      link: "/documentation/cmfive_core/introduction"
+      link: "/documentation/cmfive-core/introduction"
     - name: "Module Overview"
-      link: "/tutorials/anatomy_module/introduction"
+      link: "/tutorials/module-anatomy/introduction"
     - name: "API Documents"
-      link: "/apidocumentation/getting-started.html"
+      link: "/api/getting-started.html"
 - name: "Core Modules"
   children:
     - name: "Introduction"
-      link: "/documentation/core_modules/introduction"
+      link: "/documentation/core-modules/introduction"
     - name: Admin
       link:
     - name: Auth
@@ -41,7 +41,7 @@
     - name: Main
       link:
     - name: Report
-      link: "/documentation/core_modules/report/report"
+      link: "/documentation/core-modules/report/report"
     - name: Search
       link:
     - name: Tag
@@ -53,15 +53,15 @@
 - name: "Cmfive Tests"
   children:
     - name: "Introduction"
-      link: "/documentation/cmfive_tests/introduction"
+      link: "/documentation/cmfive-tests/introduction"
     - name: Install Codeception
-      link: "/documentation/cmfive_tests/installcodecept"
+      link: "/documentation/cmfive-tests/install-codecept"
     - name: Selenium Setup
-      link: "/documentation/cmfive_tests/installselenium"
+      link: "/documentation/cmfive-tests/install-selenium"
     - name: WebDriver Setup
-      link: "/documentation/cmfive_tests/configwebdriver"
+      link: "/documentation/cmfive-tests/config-web-driver"
     - name: Enable Tests
-      link: "/documentation/cmfive_tests/enabletests"
+      link: "/documentation/cmfive-tests/enable-tests"
     - name: Running Tests
       link:
     - name: Writing Tests
@@ -69,4 +69,4 @@
 - name: "Cloud Provider Integration"
   children:
     - name: "Amazon Web Services (AWS)"
-      link: "/documentation/cmfive_cloud_provider_integration/aws"
+      link: "/documentation/cmfive-cloud-provider-integration/aws"

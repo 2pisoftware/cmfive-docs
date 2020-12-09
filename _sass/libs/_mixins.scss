@@ -17,9 +17,7 @@
 		font-style: normal;
 		font-weight: normal;
 		text-transform: none !important;
-
 	}
-
 }
 
 /// Applies padding to an element, taking the current element-margin value into account.
@@ -34,7 +32,6 @@
 	}
 
 	padding: ($tb + nth($pad,1)) ($lr + nth($pad,2)) max(0.1em, $tb - _size(element-margin) + nth($pad,3)) ($lr + nth($pad,4)) #{$important};
-
 }
 
 /// Encodes a SVG data URL so IE doesn't choke (via codepen.io/jakob-e/pen/YXXBrp).
@@ -51,6 +48,5 @@
 	$svg: str-replace($svg, '}', '%7D');
 	$svg: str-replace($svg, ';', '%3B');
 
-	@return url("data:image/svg+xml;charset=utf8,#{$svg}");
-
+	@return url("data:image/svg+xml;charset=utf8,#{$svg}")
 }

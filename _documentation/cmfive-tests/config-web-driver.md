@@ -6,9 +6,9 @@ type: doc
 
 ## Configure WebDriver
 
-This guide assumes Codeception is installed with Selenium provisioned, see: [Installation](/documentation/cmfive_tests/installselenium).
+This guide assumes Codeception is installed with Selenium provisioned, see: [Installation](/documentation/cmfive_tests/install-selenium).
 
-Cmfive tests use the Codeception WebDriver module and Selenium to apply test actions. WebDriver support is provided by browser vendors in additional executables. Make sure Selenium can find the WebDriver for your intended browser: chromedriver, for Chrome, or Geckodriver for Firefox.
+Cmfive tests use the Codeception WebDriver module and Selenium to apply test actions. WebDriver support is provided by browser vendors in additional executables. Make sure Selenium can find the WebDriver for your intended browser: ChromeDriver, for Chrome, or GeckoDriver for Firefox.
 
 When you launch Selenium you should see a log like:
 ```log
@@ -24,7 +24,7 @@ Now, create or edit the file:
 ```batch
 cmfive-boilerplate/test/Codeception/tests/acceptance.suite.dist.yml
 ```
-Set 'port' to the port Selenium listens on, 'browser' to your WebDriver type and 'url' to your Cmfive hosting.   
+Set 'port' to the port Selenium listens on, 'browser' to your WebDriver type and 'url' to your Cmfive hosting.
 For example:
 ```yml
 	modules:
@@ -40,5 +40,3 @@ If the file is not present, duplicate a fresh one for use from the versioned exa
 ```batch
 acceptance.suite.dist.yml.example
 ```
-
-

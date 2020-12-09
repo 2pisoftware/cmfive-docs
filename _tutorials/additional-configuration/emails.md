@@ -8,7 +8,7 @@ type: tute
 
 Cmfive supports two different types of email transports to best suit your needs.
 
-- The <b>AWS Transport</b> uses various AWS services to make sending email faster and more reliable. <b>Note</b>, to enable the AWS Transport uploads must also stored in S3. See the uploads <ins>[tutorial](/tutorials/additional_configuration/uploads)</ins> for setup.
+- The <b>AWS Transport</b> uses various AWS services to make sending email faster and more reliable. <b>Note</b>, to enable the AWS Transport uploads must also stored in S3. See the uploads <ins>[tutorial](/tutorials/additional-configuration/uploads)</ins> for setup.
 - The <b>SwiftMailer</b> transport uses the SwiftMailer library.
 
 ## AWS Transport

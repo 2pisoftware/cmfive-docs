@@ -1,3 +1,4 @@
+allposts
 Berne
 CCPL
 CLI
@@ -15,10 +16,11 @@ ExampleInitialMigration
 ExampleItem
 FaceBook
 Formspree
-Geckodriver
+GeckoDriver
 GitLab
-Github
+GitHub
 GridLauncherV
+httpsjekyll
 IIS
 InitialMigration
 JS
@@ -62,7 +64,7 @@ biginteger
 boolean
 br
 checkboxes
-chromedriver
+ChromeDriver
 cmfive
 codecept
 config
@@ -129,3 +131,19 @@ yml
 Html
 pathMatch
 postUrl
+builddocs
+ajlkn
+woohoo
+radtastic
+fortawesome
+afarkas
+jdalton
+louisremi
+Giraudel
+respondjs
+Skel
+Timelog
+organisation
+scrolly
+scrollex
+tute

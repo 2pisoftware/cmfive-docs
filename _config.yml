@@ -39,6 +39,6 @@ collections:
     output: true
   tutorials:
     output: true
-  apidocumentation:
+  api:
     output: true
-  
+

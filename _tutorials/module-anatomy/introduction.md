@@ -12,4 +12,3 @@ The module name must be all lower case and must match the name in the module con
 
 To start your module create a new folder called 'example' in cmfive-boilerplate/modules.
 Your next step will be to generate the module config file. Click next to see these instructions.
-

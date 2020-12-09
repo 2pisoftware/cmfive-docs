@@ -4,14 +4,13 @@ layout: page
 type: tute
 ---
 
-
 ## Modifying The Edit Item Button
 
 If we click the 'Edit Item' button on one of our items in the table we go to the item edit action. However, this action currently only creates new items. If you look at the URL you will see that the button has appended the item's id number. It's time to modify our edit action so that it looks for an item id in the URL and loads the existing item for editing or if no id is given it creates a new item. <br/>
 The following code block shows which lines need to be modified in both the GET and POST edit functions.
 ```diff
-function edit_GET(Web $w) {
-
+function edit_GET(Web $w)
+{
 +   // we now need to check if we are creating a new item or editing an existing one
 +   // we will use pathMatch to retrieve an item id from the url.
 +   $p = $w->pathMatch('id');
@@ -22,7 +21,6 @@ function edit_GET(Web $w) {
 +   // change the title to reflect editing or adding a new item
 +   $w->ctx('title', !empty($p['id']) ? 'Edit item' : 'Add new item');
 -   $w->ctx('title','Add new item');
-
 
     // this array is the form definition
     $formData = [
@@ -56,8 +54,8 @@ function edit_GET(Web $w) {
 }
 ```
 ```diff
-function edit_POST(Web $w) {
-
+function edit_POST(Web $w)
+{
 +   // As in the GET method we need to check if we are editing an existing item.
 +   $p = $w->pathMatch('id');
 +   $item = !empty($p['id']) ? ExampleService::getInstance($w)->getItemForId($p['id']) : new ExampleItem($w);
@@ -84,8 +82,8 @@ Create a new file in actions/item called delete.php and add the following code.
 ```php
 <?php
 
-function delete_ALL(Web $w) {
-
+function delete_ALL(Web $w)
+{
     // start by finding the item id included in the URL
     $p = $w->pathMatch('id');
     // check to see if the id has been found
@@ -106,5 +104,4 @@ function delete_ALL(Web $w) {
     // redirect the user back to the item list with a message
     $w->msg('Item deleted','example');
 }
-
 ```

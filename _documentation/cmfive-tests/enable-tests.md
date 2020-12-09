@@ -6,14 +6,14 @@ type: doc
 
 ## Enable the Test Runner
 
-This guide assumes Codeception is installed and Selenium configured with WebDriver in place, see: [Installation](/documentation/cmfive_tests/configwebdriver).
+This guide assumes Codeception is installed and Selenium configured with WebDriver in place, see: [Installation](/documentation/cmfive_tests/config-web-driver).
 
 The test framework is powerful and should not be enabled in live or production environments - it will allow unaware users to destroy data if running tests inappropriately! Make use of Cmfive scripts to manage and protect your database.
 
 Enabling the test framework is simple. Edit the file:
-```batch 
+```batch
 cmfive-boilerplate/config.php
-``` 
+```
 Update the 'testrunner' setting to 'ENABLED'.
 ```php
 //========== TestRunner Configuration ==========================
@@ -32,5 +32,3 @@ php cmfive-boilerplate/cmfive.php
 ```
 
 You should see new menu items added to manage tests.
-
-

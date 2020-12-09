@@ -46,19 +46,19 @@ Now create a new file in our 'item' submodule and call it 'edit.php'. In this fi
 ```php
 <?php
 
-function edit_GET(Web $w) {
-
+function edit_GET(Web $w)
+{
 }
 
-function edit_POST(Web $w) {
-
+function edit_POST(Web $w)
+{
 }
 ```
 Let's continue by focussing on the GET method. <br />
 Here we need to create the form for adding new item data. For this we will be creating an array of input fields and sending them to multiColForm function from the Html class.
 ```php
-function edit_GET(Web $w) {
-
+function edit_GET(Web $w)
+{
     //add a title to the action
     $w->ctx('title','Add new item');
 
@@ -83,8 +83,8 @@ function edit_GET(Web $w) {
 ```
 Now that we have the form, let's add to the POST function where we will save the data to the database.
 ```php
-function edit_POST(Web $w) {
-
+function edit_POST(Web $w)
+{
     //create a new example item object
     $item = new ExampleItem($w);
 
@@ -104,8 +104,8 @@ function edit_POST(Web $w) {
 Now let's use our service functions to create a list of all saved items on the index action of our module.<br />
 Open the index.php action file and add the code to retrieve all items from the database and display them in a table.
 ```php
-function index_ALL(Web $w) {
-
+function index_ALL(Web $w)
+{
     $w->ctx("title","Example Module");
 
     // access service functions using the Web $w object and the module name
@@ -215,8 +215,8 @@ Create a new file in actions/item called delete.php and add the following code.
 ```php
 <?php
 
-function delete_ALL(Web $w) {
-
+function delete_ALL(Web $w)
+{
     // start by finding the item id included in the URL
     $p = $w->pathMatch('id');
     // check to see if the id has been found
@@ -236,5 +236,4 @@ function delete_ALL(Web $w) {
     // redirect the user back to the item list with a message
     $w->msg('Item deleted','example');
 }
-
 ```

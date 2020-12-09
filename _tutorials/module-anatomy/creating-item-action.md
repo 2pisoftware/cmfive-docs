@@ -4,7 +4,6 @@ layout: page
 type: tute
 ---
 
-
 ## Creating An Item Action
 
 We now have a button on our index action that directs to 'example-item/edit'. Check the URL to see this. Now we need to create this action and add a form for collecting and saving the item data. <br />
@@ -13,19 +12,19 @@ Now create a new file in our 'item' submodule and call it 'edit.php'. In this fi
 ```php
 <?php
 
-function edit_GET(Web $w) {
-
+function edit_GET(Web $w)
+{
 }
 
-function edit_POST(Web $w) {
-
+function edit_POST(Web $w)
+{
 }
 ```
 Let's continue by focussing on the GET method. <br />
 Here we need to create the form for adding new item data. For this we will be creating an array of input fields and sending them to multiColForm function from the HTML class.
 ```php
-function edit_GET(Web $w) {
-
+function edit_GET(Web $w)
+{
     //add a title to the action
     $w->ctx('title','Add new item');
     ctxService::getInstance($w)->("title","Add new item");
@@ -52,8 +51,8 @@ function edit_GET(Web $w) {
 ```
 Now that we have the form, let's add to the POST function where we will save the data to the database.
 ```php
-function edit_POST(Web $w) {
-
+function edit_POST(Web $w)
+{
     //create a new example item object
     $item = new ExampleItem($w);
 
@@ -73,8 +72,8 @@ function edit_POST(Web $w) {
 Now let's use our service functions to create a list of all saved items on the index action of our module.<br />
 Open the index.php action file and add the code to retrieve all items from the database and display them in a table.
 ```php
-function index_ALL(Web $w) {
-
+function index_ALL(Web $w)
+{
     $w->ctx("title","Example Module");
 
     // access service functions using the Web $w object and the module name
@@ -105,4 +104,3 @@ function index_ALL(Web $w) {
 }
 ```
 To view the table we need to add it to the index action template file.
-

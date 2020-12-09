@@ -6,11 +6,11 @@ type: doc
 
 ## Set up Selenium
 
-This guide assumes Codeception and additional PHP libraries are already installed, see: [Installation](/documentation/cmfive_tests/installcodecept).
+This guide assumes Codeception and additional PHP libraries are already installed, see: [Installation](/documentation/cmfive_tests/install-codecept).
 
-Cmfive tests use the Codeception WebDriver module. WebDriver applies test actions through simulated or actual browser sessions and Selenium offers ideal support. Currently Cmfive tests expect Selenium version 3.14.0 for compatibility with the FaceBook PHP WebDriver API used internally by Codeception.  
+Cmfive tests use the Codeception WebDriver module. WebDriver applies test actions through simulated or actual browser sessions and Selenium offers ideal support. Currently Cmfive tests expect Selenium version 3.14.0 for compatibility with the FaceBook PHP WebDriver API used internally by Codeception.
 
-Browser interfaces are provided by vendors in additional WebDriver executables. Selenium itself is a Java package. A Java run time environment must be available. There are many ways to set up Selenium.   
+Browser interfaces are provided by vendors in additional WebDriver executables. Selenium itself is a Java package. A Java run time environment must be available. There are many ways to set up Selenium.
 
 If you use Docker, a 'headless' SeleniumStandalone image is an effective approach.
 eg:
@@ -18,7 +18,7 @@ eg:
 docker run --net=host selenium/standalone-chrome:3.14.0
 ```
 
-If you rather start from scratch on your local machine, first download and unpack Selenium into any preferred folder. Into the same folder, download and unpack a Selenium WebDriver for your intended browser: chromedriver, for Chrome, or Geckodriver for Firefox.
+If you rather start from scratch on your local machine, first download and unpack Selenium into any preferred folder. Into the same folder, download and unpack a Selenium WebDriver for your intended browser: ChromeDriver, for Chrome, or GeckoDriver for Firefox.
 
 Then, launch the Selenium jar:
 ```batch
@@ -45,5 +45,3 @@ This is ready to go by running:
 ```batch
 LaunchChromeSelenium.bat
 ```
-
-

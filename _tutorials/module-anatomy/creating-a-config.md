@@ -8,11 +8,11 @@ type: tute
 
 ```php
 <?php
-Config::set('MODULE_NAME', array(
+Config::set('MODULE_NAME', [
     'active' => true,
     'path' => 'modules',
     'topmenu' => true,
-));
+]);
 ```
 
 The module config can be used to set a variety of system options as well as any custom module specific options.
@@ -27,11 +27,11 @@ In the example module folder, create a file called config.php and insert the fol
 
 ```php
 <?php
-Config::set('example', array(
+Config::set('example', [
     'active' => true,
     'path' => 'modules',
     'topmenu' => true,
-));
+]);
 ```
 
 Now clear the config cache and refresh the browser window. You should now see a menu item called 'example'.

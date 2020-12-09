@@ -6,9 +6,9 @@ type: tute
 
 # The Models Folder
 
-Models is where we store class definitions. These usually relate to our database tables but also includes a module service class for holding module level functions. 
+Models is where we store class definitions. These usually relate to our database tables but also includes a module service class for holding module level functions.
 
-Let's create our models folder, our example service class and a model for our example item. 
+Let's create our models folder, our example service class and a model for our example item.
 
 In our example module, create a folder called 'models'.
 
@@ -47,7 +47,7 @@ class ExampleItem extends DbObject {
     public $is_checked;
     public $dt_started;
     public $my_integer;
-    
+
 }
 ```
 The model properties must be named according to the column names on the database table.
