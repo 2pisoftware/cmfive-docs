@@ -8,11 +8,11 @@ type: tute
 
 To start you will need to clone the cmfive-boilerplate. Go to the 2pi Software account on GitHub, and navigate to the cmfive-boilerplate. Above the repository file on the left, click the green button labelled 'Code'. Copy the link in the popup.
 
-Now open your Git application, and choose to clone a repositosry from GitHub. Make sure it will save on your device in the folder that your web server points to. Use the copied URL in the relevant box and hit clone.
+Now open your Git application, and choose to clone a repository from GitHub. Make sure it will save on your device in the folder that your web server points to. Use the copied URL in the relevant box and hit clone.
 
-When you clone the boilerplate, cmfive-core can be installed by following the instuctions under [Installation](/tutorials/installation). The next step is to set this up seperately in your Git application.
+When you clone the boilerplate, cmfive-core can be installed by following the instructions under [Installation](/tutorials/installation). The next step is to set this up separately in your Git application.
 
-Open your Git application choose to open a repository. Find where you cloned the boilerplate to. Go to the composer folder in boilerplate. Then click vendor, 2pisoftware, cmfive-core, and open it. 
+Open your Git application choose to open a repository. Find where you cloned the boilerplate to. Go to the composer folder in boilerplate. Then click vendor, 2pisoftware, cmfive-core, and open it.
 
 ![path to cmfive-core](/assets/images/cmfive-core_path.png)
 
@@ -20,7 +20,7 @@ Now you'll be able to use the cmfive-core in your Git application.
 
 <b>Please Note:</b> For live/production deployment it is expected cmfive will refuse TLS1.0&1.1 connections, for improved security.
 This may not be the case, with default setup of your web server.
-But be aware, making a change may affect very old browers' ability to connect to cmfive.
+But be aware, making a change may affect very old browsers ability to connect to cmfive.
 
 For a linux system with Apache:
 

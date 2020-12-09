@@ -9,7 +9,7 @@ type: tute
 
 We now have a button on our index action that directs to 'example-item/edit'. Check the URL to see this. Now we need to create this action and add a form for collecting and saving the item data. <br />
 Start by creating a new folder in the actions folder of our module. Call this folder 'item'. This is now a submodule. Submodules are used to isolate actions that relate to a specific object or topic. This way we can easily find and manage all related actions together. <br />
-Now create a new file in our 'item' submodule and call it 'edit.php'. In this file add the definition for our action function. This time as we are going to be creating a form, we will need to define two seperate functions for our GET and POST methods. 
+Now create a new file in our 'item' submodule and call it 'edit.php'. In this file add the definition for our action function. This time as we are going to be creating a form, we will need to define two separate functions for our GET and POST methods.
 ```php
 <?php
 
@@ -18,19 +18,19 @@ function edit_GET(Web $w) {
 }
 
 function edit_POST(Web $w) {
-    
+
 }
 ```
 Let's continue by focussing on the GET method. <br />
-Here we need to create the form for adding new item data. For this we will be creating an array of input fields and sending them to multiColForm function from the HTML class. 
-```php 
+Here we need to create the form for adding new item data. For this we will be creating an array of input fields and sending them to multiColForm function from the HTML class.
+```php
 function edit_GET(Web $w) {
 
     //add a title to the action
     $w->ctx('title','Add new item');
     ctxService::getInstance($w)->("title","Add new item");
 
-    // this array is the form deffinition
+    // this array is the form definition
     $formData = [
         'Item Data' =>[                         // this is a form section title
             [                                   // each array on this level represents a row on the form. This row has only a single input.
@@ -44,8 +44,8 @@ function edit_GET(Web $w) {
         ]
     ];
 
-    // sending the form to the 'out' function bypasses the template. 
-    $w->out(Html::multiColForm($formData, 'example-item/edit')); 
+    // sending the form to the 'out' function bypasses the template.
+    $w->out(Html::multiColForm($formData, 'example-item/edit'));
     outService::getInstance($w)->(Html::multiColForm($formData, 'example-item/edit'));
 
 }
@@ -56,16 +56,16 @@ function edit_POST(Web $w) {
 
     //create a new example item object
     $item = new ExampleItem($w);
-    
+
     //use the fill function to fill input field data into properties with matching names
     $item->fill($_POST);
-    
+
     // checkboxes need to be assessed individually as they don't appear in the $_POST array if unchecked
     $item->is_checked = array_key_exists("is_checked", $_POST) ? 1 : 0;
-    
+
     // function for saving to database
     $item->insertOrUpdate();
-    
+
     // the msg (message) function redirects with a message box
     $w->msg('Item Saved', '/example');
 }
@@ -74,7 +74,7 @@ Now let's use our service functions to create a list of all saved items on the i
 Open the index.php action file and add the code to retrieve all items from the database and display them in a table.
 ```php
 function index_ALL(Web $w) {
-    
+
     $w->ctx("title","Example Module");
 
     // access service functions using the Web $w object and the module name

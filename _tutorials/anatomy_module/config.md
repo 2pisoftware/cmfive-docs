@@ -15,9 +15,9 @@ Config::set('MODULE_NAME', array(
 ));
 ```
 
-The module config can be used to set a variety of system options as well as any custom module specific options. 
+The module config can be used to set a variety of system options as well as any custom module specific options.
 
-The items shown are the minimum required to acheive a functioning module.
+The items shown are the minimum required to achieve a functioning module.
 
 Cmfive caches config files to aid with page loading times. Changes to config files will require the config cache to be purged and re-written. To purge the config cache click the 'clear configuration cache' button on the cmfive menu.
 
@@ -25,7 +25,7 @@ Cmfive caches config files to aid with page loading times. Changes to config fil
 
 # Tutorial
 
-In the example module folder, create a file called config.php and insert the following text. 
+In the example module folder, create a file called config.php and insert the following text.
 
 ```php
 <?php

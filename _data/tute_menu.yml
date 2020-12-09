@@ -3,9 +3,9 @@
 - name: "Installation"
   children:
     - name: "Requirements"
-      link: "/tutorials/getting-started"
+      link: "/tutorials/installation/requirements"
     - name: "Installation"
-      link: "/tutorials/installation"
+      link: "/tutorials/installation/installation"
 - name: "Help"
   children:
     - name: "Set Up cmfive-core"
@@ -37,19 +37,26 @@
     #- name: "Actions"
       #link: "/tutorials/anatomy_module/actions"
     #- name: "Assets"
-      #link: 
+      #link:
     #- name: "Install"
       #link: "/tutorials/anatomy_module/install"
     #- name: "Models"
       #link: "/tutorials/anatomy_module/models"
     #- name: "Partials"
-      #link: 
+      #link:
     #- name: "Templates"
       #link: "/tutorials/anatomy_module/templates"
     #- name: "Config"
       #link: "/tutorials/anatomy_module/config"
     #- name: "Hooks"
-      #link: 
+      #link:
     #- name: "Roles"
-      #link: 
-
+      #link:
+- name: "Additional Configuration"
+  children:
+    - name: "Emails"
+      link: "/tutorials/additional_configuration/emails"
+    - name: "Logs"
+      link: "/tutorials/additional_configuration/logs"
+    - name: "Uploads"
+      link: "/tutorials/additional_configuration/uploads"

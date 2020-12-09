@@ -1,10 +1,9 @@
 ---
-title: Tutorials
+title: Installation
 layout: page
 type: tute
 ---
 
-## Installation
 This guide assumes a working knowledge on how to set up apache to serve a PHP application as well as having an empty MySQL database (with user and password) ready to go.
 
 To install Cmfive, clone or download [the Boilerplate repository](https://github.com/2pisoftware/cmfive-boilerplate) and unpack (if necessary) into a directory of your choosing.

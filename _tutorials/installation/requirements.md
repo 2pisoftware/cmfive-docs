@@ -1,10 +1,8 @@
 ---
-title: Documentation
+title: Requirements
 layout: page
-type: doc
+type: tute
 ---
-
-## Requirements
 
 Cmfive v3 requires PHP7.2.x and MySQL 5.5+
 
@@ -20,4 +18,3 @@ Cmfive requires the following PHP extensions:
 - Readline
 - XML
 - ZIP
-

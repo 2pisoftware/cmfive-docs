@@ -6,9 +6,9 @@ type: tute
 
 # Install Folder and Migration Files
 
-The Install folder holds the scripts required for all installation needs of the module. These may be database migrations, database seeds, report sql files, templates, and others. 
+The Install folder holds the scripts required for all installation needs of the module. These may be database migrations, database seeds, report sql files, templates, and others.
 
-Migrations are used to make changes to the database structure. Migration files are generated through the UI and are timestamped to ensure they run in the correct order. 
+Migrations are used to make changes to the database structure. Migration files are generated through the UI and are timestamped to ensure they run in the correct order.
 
 ```php
 public function up() {
@@ -37,7 +37,7 @@ public function description()
 This function should return either a string or null. The description is displayed on the migrations page in cmfive.
 
 Let's add a migration to our example module.<br />
-Start by navigating to the migration page in Cmfive. You can find this uder the Admin menu item. Once you are on the migrations page move to the 'individual' tab to view migrations sorted by module.<br /> 
+Start by navigating to the migration page in Cmfive. You can find this under the Admin menu item. Once you are on the migrations page move to the 'individual' tab to view migrations sorted by module.<br />
 Scroll down the list and select our 'Example' module.<br />
 Click the 'Create an example migration' button at the top of the module list. Call it 'InitialMigration'.
 
@@ -63,7 +63,7 @@ public function up() {
     $column->setName('id')
             ->setType('biginteger')
             ->setIdentity(true);
-            
+
     if (!$this->hasTable("example_item")) { //it can be helpful to check that the table name is not used
         $this->table("example_item", [ // table names should be appended with 'ModuleName_'
             "id" => false,
@@ -71,10 +71,10 @@ public function up() {
         ])->addColumn($column) // add the id column
         ->addStringColumn('name')
         ->addBooleanColumn('is_checked') //boolean columns need to be appended with 'is_'
-        ->addDateTimeColumn('dt_started') // Datetime columns need to be appended eith 'dt_'
+        ->addDateTimeColumn('dt_started') // Datetime columns need to be appended with 'dt_'
         ->addIntegerColumn('my_integer')
         ->addCmfiveParameters() // this function adds some standard columns used in cmfive. dt_created, dt_modified, creator_id, modifier_id, and is_deleted.
-        ->create(); 
+        ->create();
     }
 }
 ```
@@ -87,7 +87,7 @@ public function down() {
 ```
 Now that we have created our migration we can run it using the Cmfive UI. <br />
 In the browser, navigate to the Cmfive migrations page, view by individual modules, find the example module and click either 'run all example migrations' or 'migrate to here' on our migration.<br />
-After runnning the migration we can verify that the table was created in the database. <br />
-To roll back we can click 'rollback to here' next to our migration. This will run the down fuction and the table will be removed.
+After running the migration we can verify that the table was created in the database. <br />
+To roll back we can click 'rollback to here' next to our migration. This will run the down function and the table will be removed.
 
 Make sure the migration is run and we can now look at creating our item model and our module service class.

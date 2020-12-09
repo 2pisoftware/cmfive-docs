@@ -6,13 +6,13 @@ type: tute
 
 ## Templates
 
-Templates are used to define the UI for actions. These files contain both HTML and PHP that get injected into the body of the Cmfive layout, our default action template. 
+Templates are used to define the UI for actions. These files contain both HTML and PHP that get injected into the body of the Cmfive layout, our default action template.
 
 ## Tutorial
 
 Let's create a template for our example module's index action. Create a folder called 'templates' in our example module. In that folder create a new file called 'index.tpl.php'. Template file names must match the action filename followed by '.tpl.php'.
 
-To add a button to the example idex page we are going to use Cmfive's html class. This can be found in 'system/html.php'. We will be using the 'b' function that returns a html button.<br />
+To add a button to the example index page we are going to use Cmfive's html class. This can be found in 'system/html.php'. We will be using the 'b' function that returns a html button.<br />
 Add this code to the 'index.tpl.php'.
 ```html
 <?php echo Html::b("example-item/edit","Add new item"); ?>
@@ -28,5 +28,5 @@ Open templates/index.tpl.php and add the following lines.
 <?php echo Html::b("example-item/edit","Add new item"); ?>
 <?php echo $itemTable; ?>
 ```
-The item table is now visible on the idex action. Use the add new item button to add a few more items to the table.<br />
+The item table is now visible on the index action. Use the add new item button to add a few more items to the table.<br />
 Now we need to get our item action buttons to work properly. We will do this back in the actions section. Resume the actions tutorial [here](actions#tutorial-part-3)
