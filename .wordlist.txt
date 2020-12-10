@@ -176,6 +176,7 @@ DbService
 GetObject
 GetObjects
 GetItemForId
+getItemForId
 DbObject
 tpl
 Submodules
@@ -237,3 +238,4 @@ polyfill
 skel
 unsplash
 TODO
+th
