@@ -6,7 +6,7 @@ type: tute
 
 ## Actions
 
-Cmfive actions include pages and asynchronous request endpoints. They are essentially functions that run from urls. Actions can be either at the module level or separated further through sub modules. <br />
+Cmfive actions include pages and asynchronous request endpoints. They are essentially functions that run from URLs. Actions can be either at the module level or separated further through sub modules. <br />
 The following example is of an index action located in module_folder -> actions -> index.php.
 
 ```php
@@ -21,7 +21,7 @@ The function name before the underscore must match the file name. This is follow
 
 ## Tutorial
 
-Let's create a few actions for our example module. First we will create an index action that lists all example items stored iin the database, then we'll make an 'item' submodule to hold actions for adding, editing and deleting items.
+Let's create a few actions for our example module. First we will create an index action that lists all example items stored in the database, then we'll make an 'item' submodule to hold actions for adding, editing and deleting items.
 
 Start by creating a folder called 'actions' in the example module folder. <br />
 Create a new file in the actions folder and call it 'index.php' and copy the code below.<br />

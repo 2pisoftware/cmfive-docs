@@ -12,7 +12,7 @@ Now open your Git application, and choose to clone a repository from GitHub. Mak
 
 When you clone the boilerplate, cmfive-core can be installed by following the instructions under [Installation](/tutorials/installation). The next step is to set this up separately in your Git application.
 
-Open your Git application choose to open a repository. Find where you cloned the boilerplate to. Go to the composer folder in boilerplate. Then click vendor, 2pisoftware, cmfive-core, and open it.
+Open your Git application choose to open a repository. Find where you cloned the boilerplate to. Go to the following path **composer/vendor/2pisoftware/cmfive-core** composer folder in boilerplate.
 
 ![path to cmfive-core](/assets/images/cmfive-core_path.png)
 
@@ -22,7 +22,7 @@ Now you'll be able to use the cmfive-core in your Git application.
 This may not be the case, with default setup of your web server.
 But be aware, making a change may affect very old browsers ability to connect to cmfive.
 
-For a linux system with Apache:
+For a Linux system with Apache:
 
 To find SSL configuration references, run:
 grep -i -r "SSLEngine" /etc/apache2

@@ -23,7 +23,7 @@ The 'down' function restores the database to it's previous state. This function 
 ```php
 public function preText()
 ```
-The 'preText' function is used to notify administrators of any requirements needed before the running of the migration. EG. if a migration requires a new composer php library to be installed the preTest can inform the user and prevent the migration from running until such requirements are met.  <br />
+The 'preText' function is used to notify administrators of any requirements needed before the running of the migration. eg, if a migration requires a new composer php library to be installed the preTest can inform the user and prevent the migration from running until such requirements are met.  <br />
 This function can run checks and conditionally return either a message string allowing the user to pause the migration or return null allowing the migration to run. If there are no requirements for the migration this function can be left as is.
 
 ```php

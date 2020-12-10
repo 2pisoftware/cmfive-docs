@@ -6,7 +6,7 @@ type: tute
 
 ## Creating The Index Action
 
-Cmfive actions include pages and asynchronous request endpoints. They are essentially functions that run from urls. Actions can be either at the module level or separated further through sub modules. <br />
+Cmfive actions include pages and asynchronous request endpoints. They are essentially functions that run from URLs. Actions can be either at the module level or separated further through sub modules. <br />
 The following example is of an index action located in module_folder -> actions -> index.php.
 
 ```php
