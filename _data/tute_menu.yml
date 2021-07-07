@@ -6,6 +6,8 @@
       link: "/tutorials/installation/requirements"
     - name: "Installation"
       link: "/tutorials/installation/installation"
+    - name: "Developers Installation Instructions"
+      link: "/tutorials/installation/developer-installation"
 - name: "Help"
   children:
     - name: "Set Up cmfive-core"

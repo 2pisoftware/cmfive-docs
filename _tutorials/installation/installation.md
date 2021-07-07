@@ -18,7 +18,7 @@ Config::set("database", [
     "driver"    => "mysql"
 ]);
 ```
-Change any other configuration items as you see fit. Then open a terminal in the boilerplate folder and type:
+Change any other configuration items as you see fit (You will need to purge the config cache after changing configuration files. You can see how in Creating a Config under Learning Cmfive). Then open a terminal in the boilerplate folder and type:
 ```sh
 php cmfive.php
 ```
@@ -27,3 +27,5 @@ Running through commands 1-4 will get you set up and ready to go. Here is an exp
 2. Will install all Cmfive migrations.
 3. Will set up an administrator user, needed to log in to a new Cmfive install.
 4. Will generate encryption keys used by Cmfive.
+
+If you experience errors with these commands, see the further instructions on the next page.
