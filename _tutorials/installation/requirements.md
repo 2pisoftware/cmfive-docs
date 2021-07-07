@@ -5,8 +5,9 @@ type: tute
 ---
 
 Cmfive v3 requires PHP7.2.x and MySQL 5.5+
+<!--Need to add getting correct docker insallation at https://releases.ubuntu.com/18.04.5/?_ga=2.67351829.527945484.1625616788-786732526.1625616788-->
 
-Cmfive works best with Linux and works out of the box with the Apache web server. Cmfive can also work with Windows and other web servers (like IIS and Nginx) but may require additional configuration.
+Cmfive works best with Linux and works out of the box with the Apache web server. Cmfive can also work with Windows and other web servers (like IIS and Nginx) but may require additional configuration. This may include setting up a virtual machine and installing your coding software on that.
 
 Cmfive requires the following PHP extensions:
 - CLI
@@ -18,3 +19,11 @@ Cmfive requires the following PHP extensions:
 - Readline
 - XML
 - ZIP
+- GIT
+- Docker Desktop
+
+The version of Docker Desktop you want to install is the 64-bit PC desktop image. You can find this version of Docker Desktop [here](https://releases.ubuntu.com/18.04.5/?_ga=2.67351829.527945484.1625616788-786732526.1625616788). 
+
+You will also need the following extentions in you coding software:
+- Docker
+- GitLens

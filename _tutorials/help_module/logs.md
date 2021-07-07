@@ -8,7 +8,7 @@ type: tute
 
 If you get an error message at any point when you display your code in localhost, Cmfive will diagnose it for you using the logs.
 
-Finding the logs is simple. First, open the boilerplate. Go to the .build folder, the storage folder, and the logs folder. The files here store information about every time the Cmfive database has been accessed.
+Finding the logs is simple. First, open the boilerplate. Go to the storage folder, and then the logs folder. The files here store information about every time the Cmfive database has been accessed.
 
 Note that each of the log names have cmfive, followed by a date, and are appended by '.log'. To find the log for your error, select the log that has today's date in the name (this should be at the bottom of the list). All entries in the log files start with a date and time stamp in square brackets. Scroll down to the last entry of your file.
 
