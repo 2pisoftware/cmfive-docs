@@ -1,5 +1,5 @@
 ---
-title: Further Installation for Deevelopers
+title: Further Installation for Developers
 layout: page
 type: tute
 ---
