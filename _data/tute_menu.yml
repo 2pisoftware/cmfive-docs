@@ -22,6 +22,8 @@
       link: "/tutorials/help_module/permissions"
     - name: "Getting Logged Out"
       link: "/tutorials/help_module/sessions"
+    - name: "Creating MySQL Users"
+      link: "/tutorials/help_module/mysql-users"
 - name: "Learning Cmfive"
   children:
     - name: "Introduction"
