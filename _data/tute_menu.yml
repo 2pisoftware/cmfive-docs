@@ -10,6 +10,8 @@
       link: "/tutorials/installation/developer-installation"
 - name: "Help"
   children:
+    - name: "Creating MySQL Users"
+      link: "/tutorials/help_module/mysql-users"
     - name: "Set Up cmfive-core"
       link: "/tutorials/help_module/cmfive-core-setup"
     - name: "Set Up Debug"
@@ -22,8 +24,6 @@
       link: "/tutorials/help_module/permissions"
     - name: "Getting Logged Out"
       link: "/tutorials/help_module/sessions"
-    - name: "Creating MySQL Users"
-      link: "/tutorials/help_module/mysql-users"
 - name: "Learning Cmfive"
   children:
     - name: "Introduction"
