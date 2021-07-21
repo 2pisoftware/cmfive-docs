@@ -8,7 +8,7 @@ type: tute
 
 The Install folder holds the scripts required for all installation needs of the module. These may be database migrations, database seeds, report sql files, templates, and others.
 
-Migrations are used to make changes to the database structure. Migration files are generated through the UI and are timestamped to ensure they run in the correct order.
+Migrations are used to make changes to the database structure. Migration files are generated through the UI and are timestamped (the year, month, day, and time to the second. It will look something like 20210721022033) to ensure they run in the correct order.
 
 ```php
 public function up()
