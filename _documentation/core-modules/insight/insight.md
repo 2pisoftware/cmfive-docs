@@ -21,11 +21,11 @@ Below this, give the variables for the insights name and description. These will
 public $name = "Example Insight";
 public $description = "This insight is being used to show correct insight syntax in the docs";
 ```
-These variables will indicate to users which isnight is which.
+These variables will indicate to users which insight is which.
 
 All insights will contain a getFilters function and a run function. The getFilters function will be called when a user clicks on the View button next to the insight. The run function is called when the user clicks Run from the view screen.
 
-getFilters will be an array, which sets up the parameters the user can choose. Before viewing an insight, the user may specify it to only show information from specififc dates, for certain users, etc.<br>
+getFilters will be an array, which sets up the parameters the user can choose. Before viewing an insight, the user may specify it to only show information from specific dates, for certain users, etc.<br>
 Add the below code underneath your name and description variables.
 
 ```php
