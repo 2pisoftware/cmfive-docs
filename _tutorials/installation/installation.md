@@ -29,3 +29,5 @@ Running through commands 1-4 will get you set up and ready to go. Here is an exp
 4. Will generate encryption keys used by Cmfive.
 
 If you experience errors with these commands, see the further instructions on the next page.
+
+Please check out the Help pages for further support. Some problems and solutions are covered here. However, some operating systems may run into further issues and we can't always offer support.
