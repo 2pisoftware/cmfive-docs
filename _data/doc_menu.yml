@@ -36,6 +36,8 @@
       link:
     - name: Inbox
       link:
+    - name: Insight
+      link: "/documentation/core-modules/insight/insight"
     - name: Install
       link:
     - name: Main
