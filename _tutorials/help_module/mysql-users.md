@@ -6,6 +6,8 @@ type: tute
 
 ## Using The Terminal To Create a MySQL User And Check Which User Is The Logged In User
 
+<!--Creatiny MySQL user-->
+
 Once you have created your MySQL user, you can log in. The following will go over how to check the information of the current user.
 
 This is important because it does not use the root user when we server request from the browser. When the browser sends the request to the server, the server will run the code with an automatic fake user. This user is only to serve web pages, which means we need to make sure our files have permissions for that user and for that, we need to know what that user is named.
