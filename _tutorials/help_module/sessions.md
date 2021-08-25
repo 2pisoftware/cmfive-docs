@@ -16,3 +16,4 @@ type: tute
 <!--system/modules/auth/actions/login.php. See login_POST in outline-->
 <!--the cookie may be getting it wrong. The seession could actually be fine-->
 <!--close VSCode and Firefox-->
+Close and restart VSCode and Firefox.
