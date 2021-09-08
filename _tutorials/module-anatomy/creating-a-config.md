@@ -41,3 +41,5 @@ Now clear the config cache and refresh the browser window. You should now see a 
 ![Example menu item](/assets/images/example_menu_item.png)
 
 Now that our module has a config we need to add some tables to the database.
+
+If an error occurs follow the instructions in [The Models Folder] (theModelsFolder) and see if this rectifies the issue.
