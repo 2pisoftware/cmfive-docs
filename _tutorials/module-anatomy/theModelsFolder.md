@@ -52,4 +52,6 @@ class ExampleItem extends DbObject {
 ```
 The model properties must be named according to the column names on the database table.
 
+If you go to /system/classes and look at the DBObject.php file, you can see some further standard model properties that can be used, or will appear in all of your tables.
+
 Now that we have our model and service class we can start creating some actions for our module.
