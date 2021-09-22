@@ -67,7 +67,7 @@ First, the insight finds the correct data based on the filters you have chosen. 
 $data = ExampleService::getInstance($w)->getExamples(($parameters['dt_from']), ($parameters['dt_to']));
 ```
 
-The getExamples function refers to a where array. You will have to create one in the appropriate service class for your insight. It will have to cover all the filters in your getFilters function. The where array will handle the options the user selects when viewing an insight.
+The getExamples function refers to a where array. In most cases you will not have to build one. Variables for all your data required for your insights tables can usually be created using existing service functions.
 
 After retrieving the data based on the selected filters, your run function must build its table(s). It will look something like this.
 
