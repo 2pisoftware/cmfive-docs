@@ -44,6 +44,8 @@
       link: "/tutorials/module-anatomy/add-item-table"
     - name: "Edit Item Button"
       link: "/tutorials/module-anatomy/edit-item-button"
+    - name: "Users for Module"
+      link: "/tutorials/module-anatomy/users-and-logging-in"
     #- name: "Actions"
       #link: "/tutorials/module-anatomy/actions"
     #- name: "Assets"
