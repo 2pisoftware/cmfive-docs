@@ -18,3 +18,9 @@ You will need to add this code to your own add user function for your module. It
 If it throws an error your file should set it to return to a list of users.
 
 The $contact->fill and $contact->insertOrUpdate should be below this.
+
+After the contact part you should add the following code.
+```php
+$user->fill($_POST);
+$user->insertOrUpdate;
+```
