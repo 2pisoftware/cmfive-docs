@@ -6,7 +6,9 @@ type: tute
 
 ## Using The Terminal To Create a MySQL User And Check Which User Is The Logged In User
 
-<!--Creatiny MySQL user-->
+<!--Creating MySQL user-->
+<!-- Use config_hostname photo
+Remove checking the logged in user instructions -->
 
 Once you have created your MySQL user, you can log in. The following will go over how to check the information of the current user.
 
@@ -19,6 +21,8 @@ The following command will show you the change owner options.
 ```bash
 chown --help
 ```
+
+<!-- This line goes in installation -->
 To change the owner and group for all of the files:
 ```bash
 chown -R www-data:www-data storage/

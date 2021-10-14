@@ -27,7 +27,7 @@ Running through commands 1-4 will get you set up and ready to go. Here is an exp
 2. Will install all Cmfive migrations.
 3. Will set up an administrator user, needed to log in to a new Cmfive install.
 4. Will generate encryption keys used by Cmfive.
-
+<!-- Add links for pages with step instructions -->
 If you experience errors with these commands, see the further instructions on the next page.
 
 Please check out the Help pages for further support. Some problems and solutions are covered here. However, some operating systems may run into further issues and we can't always offer support.

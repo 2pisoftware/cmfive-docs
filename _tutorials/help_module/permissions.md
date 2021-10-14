@@ -26,5 +26,8 @@ Right click on the container called cmfive-boilerplate and select attach a shell
 <!--Get mkcert
 https://kifarunix.com/how-to-create-self-signed-ssl-certificate-with-mkcert-on-ubuntu-18-04/
 Config changes
+
+
+This goes in installation
 Config::set('system.environment', 'development');
 -->
