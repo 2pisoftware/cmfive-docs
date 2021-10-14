@@ -23,8 +23,6 @@ Cmfive caches config files to aid with page loading times. Changes to config fil
 
 ![Clear configuration cache](/assets/images/config_refresh.png)
 
-You can aslo purge the config cache by finding the automatically created config.cache file in .build and deleting it. Cmfive creates this file every time there is information it wants to store in the config cache.
-
 In the example module folder, create a file called config.php and insert the following text (this is differnt to the config.php file changed in the instructions under the installation menu).
 
 ```php
