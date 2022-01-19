@@ -6,8 +6,6 @@
       link: "/tutorials/installation/requirements"
     - name: "Installation"
       link: "/tutorials/installation/installation"
-    - name: "Developers Installation Instructions"
-      link: "/tutorials/installation/developer-installation"
 - name: "Help"
   children:
     - name: "Creating MySQL Users"
@@ -18,12 +16,6 @@
       link: "/tutorials/help_module/debug-setup"
     - name: "Cmfive Logs"
       link: "/tutorials/help_module/logs"
-    - name: "Can't Connect to Database"
-      link: "/tutorials/help_module/cannot-connect-to-database"
-    - name: "Can't Log In"
-      link: "/tutorials/help_module/permissions"
-    - name: "Getting Logged Out"
-      link: "/tutorials/help_module/sessions"
 - name: "Learning Cmfive"
   children:
     - name: "Introduction"
