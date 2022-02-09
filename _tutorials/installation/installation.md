@@ -68,6 +68,32 @@ Open Cmfive in your browser to check it is working. You should see a page like t
 
 ![Login Page](/assets/images/cmfive_login.png)
 
-Make sure you can login and see the main index bar.
+Make sure you can login and see the main index bar. If there are issues with this, check some of the commands under MySQL Users in the Database below to make sure the correct user is set, and has all their permissions.
 
 Please check out the Help pages for further support. Some operating systems may run into further issues and we can't always offer support.
+
+## MySQL Users in the Database
+
+The following command will show you the change owner options.
+```bash
+chown --help
+```
+
+To change the owner and group for all of the files:
+```bash
+chown -R www-data:www-data storage/
+```
+
+Copy the following bash commands into your terminal one at a time and click enter.
+
+```bash
+use cmfive;
+```
+
+```bash
+MySQL> select * from user;
+```
+
+The ‘*’ means ‘all’, so you are asking to see all the information on the current user. 
+
+The output will give you a table of information about the user. 
