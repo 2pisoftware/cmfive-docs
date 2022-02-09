@@ -23,6 +23,8 @@ If you are using Windows it will need to be cloned to ubuntu partition.
 
 Open the Boilerplate repository in VSCode and locate the docker-compose.yml file (near the bottom). Right click it and choose compose-up. The terminal will automatically run through several things. This may take several minutes.
 
+You'll need to set up your MySQL user at this point.
+
 Next you need to set up a MySQL user. If you are unsure how to do this, click [here](/tutorials/help_module/mysql-users) for instructions.
 
 Copy the config.php.example file to config.php and update the database section to contain the credentials of your Cmfive database. The user, password, and database should all be "cmfive", the host is mysql-5.7 and the port is 3306, e.g.:
