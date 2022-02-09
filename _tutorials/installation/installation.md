@@ -6,9 +6,26 @@ type: tute
 
 This guide assumes a working knowledge on how to set up apache to serve a PHP application as well as having an empty MySQL database (with user and password) ready to go. For help in setting up a user and password see 'Creating MySQL Users' in the 'Help' menu.
 
-To install Cmfive, clone or download [the Boilerplate repository](https://github.com/2pisoftware/cmfive-boilerplate) and unpack (if necessary) into a directory of your choosing.
+First, you must install Cmfive's dependencies. 
 
-Copy the config.php.example file to config.php and update the database section to contain the credentials of your Cmfive database, e.g.:
+For Windows:
+- install [Docker Desktop](https://releases.ubuntu.com/18.04.5/?_ga=2.67351829.527945484.1625616788-786732526.1625616788) 
+- install Ubuntu 18.04
+
+For Mac and Linux:
+- install Docker
+
+Install VSCode. This is needed for all operating systems.
+
+To install Cmfive, clone or download [the Boilerplate repository](https://github.com/2pisoftware/cmfive-boilerplate) and unpack (if necessary) into a directory of your choosing.
+<br>
+If you are using Windows it will need to be cloned to ubuntu partition.
+
+Open the Boilerplate repository in VSCode and locate the docker-compose.yml file (near the bottom). Right click it and choose compose-up. The terminal will automatically run through several things. This may take several minutes.
+
+Next you need to set up a MySQL user. If you are unsure how to do this, click [here](/tutorials/help_module/mysql-users) for instructions.
+
+Copy the config.php.example file to config.php and update the database section to contain the credentials of your Cmfive database. The user, password, and database should all be "cmfive", the host is mysql-5.7 and the port is 3306, e.g.:
 ```php
 Config::set("database", [
     "hostname"  => "localhost",
@@ -18,7 +35,17 @@ Config::set("database", [
     "driver"    => "mysql"
 ]);
 ```
-Change any other configuration items as you see fit (You will need to purge the config cache after changing configuration files. You can see how in Creating a Config under Learning Cmfive). Then open a terminal in the boilerplate folder and type:
+The system environment section of this file should be set ot development.
+
+Change any other configuration items as you see fit (You will need to purge the config cache after changing configuration files. This is done by deleting the config item for encryption). 
+
+Attach a shell to the cmfive-boilerplate container. To do this go to the docker tab in VSCode:
+
+![Docker Tab](/assets/images/docker.png)
+
+Right click the cmfive-boilerplate container (Under CONTAINERS and cmfive-boilerplate. The one called cmfive-boilerplate_webapp) and choose attach shell.
+
+Type the below command into the terminal.
 ```sh
 php cmfive.php
 ```
@@ -27,7 +54,20 @@ Running through commands 1-4 will get you set up and ready to go. Here is an exp
 2. Will install all Cmfive migrations.
 3. Will set up an administrator user, needed to log in to a new Cmfive install.
 4. Will generate encryption keys used by Cmfive.
-<!-- Add links for pages with step instructions -->
-If you experience errors with these commands, see the further instructions on the next page.
 
-Please check out the Help pages for further support. Some problems and solutions are covered here. However, some operating systems may run into further issues and we can't always offer support.
+Open a new VSCode window that does not have a repository open in it. Go to the terminal. Choose View an Terminal from the toolbar menu if it does not automatically appear at the bottom of your new menu. This terminal should not be attached to any container, so it should have the name of your computer and no repository name after it.
+
+In this terminal run the following commands one at a time:
+```sh
+sudo chmod 777 -R storage/
+sudo chmod 777 -R cache/
+```
+If you get an error, try removing sudo and running the commands again.
+
+Open Cmfive in your browser to check it is working. You should see a page like this:
+
+![Login Page](/assets/images/cmfive_login.png)
+
+Make sure you can login and see the main index bar.
+
+Please check out the Help pages for further support. Some operating systems may run into further issues and we can't always offer support.
