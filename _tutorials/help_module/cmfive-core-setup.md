@@ -10,7 +10,7 @@ To start you will need to clone the cmfive-boilerplate. Go to the 2pi Software a
 
 Now open your Git application, and choose to clone a repository from GitHub. Make sure it will save on your device in the folder that your web server points to. Use the copied URL in the relevant box and hit clone.
 
-When you clone the boilerplate, cmfive-core can be installed by following the instructions under [Installation](/tutorials/installation). The next step is to set this up separately in your Git application.
+When you clone the boilerplate, cmfive-core can be installed by following the instructions under [Installation](/tutorials/installation/installation). The next step is to set this up separately in your Git application.
 
 Open your Git application choose to open a repository. Find where you cloned the boilerplate to. Go to the following path **composer/vendor/2pisoftware/cmfive-core** composer folder in boilerplate.
 
