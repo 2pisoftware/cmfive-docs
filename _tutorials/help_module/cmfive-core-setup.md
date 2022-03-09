@@ -33,6 +33,7 @@ eg:
 /etc/apache2/sites-available/000-default.conf:  SSLEngine on
 
 Add these entries to the files:
+
 ```php
 SSLProtocol all -SSLv2 -SSLv3 -TLSv1 -TLSv1.1
 SSLHonorCipherOrder on

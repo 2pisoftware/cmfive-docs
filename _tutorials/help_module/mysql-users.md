@@ -8,16 +8,16 @@ type: tute
 
 <!--Creating MySQL user-->
 <!-- Use config_hostname photo-->
-Connect a shell to the mysql container (labelled mysql:5.7.21 or similar).
+Connect a shell to the mysql container (labelled mysql:5.7.21 or similar) by right clicking and choosing ```Attach Shell```.
 
 Type the following command into the terminal:
 ```sh
-mysql -uroot -p
+mysql -u root -p
 ```
 
 It will ask you for a password. This is just 'root'.
 
-You are now logged in as the root user who has full access to all the databases. However, we never do our coding using the root MySQL user as it is insecure. It is unlikely, but even if you want full access to all of the databases, it is best practice to create another user who also has these permissions. 
+You are now logged in as the root user who has full access to all the databases. This is the user used for your cmfive set up. However, we never do our coding using the root MySQL user as it is insecure. It is unlikely, but even if you want full access to all of the databases, it is best practice to create another user who also has these permissions. 
 
 Type the following in to the terminal to create your new user.
 

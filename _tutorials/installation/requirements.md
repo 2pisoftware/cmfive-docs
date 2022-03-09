@@ -25,7 +25,9 @@ Cmfive requires the following PHP extensions:
 The version of Docker Desktop you want to install is the 64-bit PC desktop image. You can find this version of Docker Desktop [here](https://releases.ubuntu.com/18.04.5/?_ga=2.67351829.527945484.1625616788-786732526.1625616788). 
 
 You will also need the following extensions in you coding software:
-- Docker
+- Docker extension by Microsoft (extension ID: ```ms-azuretools.vscode-docker```)
+- Docker Compose
+- Git
 - GitLens
 
 The deployment section has additional instructions to help you with installation of some of these requirements.
