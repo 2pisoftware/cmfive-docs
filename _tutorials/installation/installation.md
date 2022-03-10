@@ -51,17 +51,17 @@ Config::set('system.encryption', [
 ]);
 ```
 
-#### Step 8 - Make directories accessible to containers
-Open up a normal terminal window and run ```chmod 777 -R cache/ storage/ uploads/```
-
-#### Step 9 - Connect to PHP container
+#### Step 8 - Connect to PHP container
 Right click on the ```nginx-php``` container and click ```Attach Shell```.
+
+#### Step 9 - Make directories accessible to containers
+In the container run ```chmod 777 -R cache/ storage/ uploads/```
 
 #### Step 10 - Install Cmfive
 Run the following commands:
 - ```php cmfive.php install core```
-- ```php cmfive.php install migrations```
 - ```php cmfive.php seed encryption```
+- ```php cmfive.php install migrations```
 - ```php cmfive.php seed admin Admin Admin <your email> admin admin```
     - This will make an admin user with username and password ```admin```. If you do not want this instead run ```php cmfive.php```, enter option 3 and follow the prompts
 
@@ -113,17 +113,17 @@ Config::set('system.encryption', [
 ]);
 ```
 
-#### Step 7 - Make directories accessible to containers
-In your terminal window and run ```chmod 777 -R cache/ storage/ uploads/```
-
-#### Step 8 - Connect to PHP container
+#### Step 7 - Connect to PHP container
 Connect to the PHP webserver container by running ```docker exec -it nginx-php7.4 bash``` (you will need to replace "7.4" with "8.1" if you are using Cmfive v5+)
+
+#### Step 8 - Make directories accessible to containers
+In the container, run ```chmod 777 -R cache/ storage/ uploads/```
 
 #### Step 9 - Install Cmfive
 Run the following commands:
 - ```php cmfive.php install core```
-- ```php cmfive.php install migrations```
 - ```php cmfive.php seed encryption```
+- ```php cmfive.php install migrations```
 - ```php cmfive.php seed admin Admin Admin <your email> admin admin```
     - This will make an admin user with username and password ```admin```. If you do not want this instead run ```php cmfive.php```, enter option 3 and follow the prompts
 
