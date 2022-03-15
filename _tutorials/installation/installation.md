@@ -17,27 +17,27 @@ For Mac and Linux:
 
 ## Installation using VS Code
 
-Install VSCode. This is needed for all operating systems.
+1. Install VSCode. This is needed for all operating systems.
 
-To install Cmfive, clone or download [the Boilerplate repository](https://github.com/2pisoftware/cmfive-boilerplate) and unpack (if necessary) into a directory of your choosing.
+2. To install Cmfive, clone or download [the Boilerplate repository](https://github.com/2pisoftware/cmfive-boilerplate) and unpack (if necessary) into a directory of your choosing.
 <br>
 If you are using Windows it will need to be cloned to ubuntu partition.
 
-Open the Boilerplate repository in VSCode.
+3. Open the Boilerplate repository in VSCode.
 
-Install the Docker extension specified in [requirements](/tutorials/installation/requirements) in VS Code.
+4. Install the Docker extension specified in [requirements](/tutorials/installation/requirements) in VS Code.
 
-Locate the docker-compose.yml file (near the bottom). Right click it and choose compose-up. The terminal will automatically run through several things. This may take several minutes.
+5. Locate the docker-compose.yml file (near the bottom). Right click it and choose compose-up. The terminal will automatically run through several things. This may take several minutes.
 
-When Docker Compose has finished, check that you have three containers running by clicking on the Docker tab on the left.
+6. When Docker Compose has finished, check that you have three containers running by clicking on the Docker tab on the left.
 
 ![Docker Tab](/assets/images/docker.png)
 
-Next you need to set up a MySQL user. If you are unsure how to do this, click [here](/tutorials/help_module/mysql-users) for instructions.
+7. Next you need to set up a MySQL user. If you are unsure how to do this, click [here](/tutorials/help_module/mysql-users) for instructions.
 
-Connect to MySQL by right clicking on the MySQL container (labelled mysql:5.7.21 or similar) in the Docker tab and choosing ```Attach Shell```. Then type ```mysql -u root -p``` with the password ```root```.
+8. Connect to MySQL by right clicking on the MySQL container (labelled mysql:5.7.21 or similar) in the Docker tab and choosing ```Attach Shell```. Then type ```mysql -u root -p``` with the password ```root```.
 
-Run the following commands:
+9. Run the following commands:
  - ```CREATE DATABASE cmfive;```
  - ```CREATE USER cmfive@'%' IDENTIFIED BY 'cmfive';```
  - ```GRANT ALL PRIVILEGES ON cmfive.* TO cmfive@'%';```
@@ -45,13 +45,13 @@ Run the following commands:
 
 You can now close the terminal window to the MySQL Container. l
 
-Copy the ```config.php.example``` file to ```config.php```. Replace ```<username>```, ```<password>``` and ```<database>``` with ```cmfive```.
+10. Copy the ```config.php.example``` file to ```config.php```. Replace ```<username>```, ```<password>``` and ```<database>``` with ```cmfive```.
 
 Also replace ```localhost``` with the _name_ of your MySQL container, usually ```mysql-5.7``` or ```mysql-8``` depending on the version of Cmfive you are using. The port should be ```3306```.
 
 The system environment section of this file should be set ot development.
 
-Change any other configuration items as you see fit (You will need to purge the config cache after changing configuration files. This is done by deleting the config item for encryption). 
+11. Change any other configuration items as you see fit (You will need to purge the config cache after changing configuration files. This is done by deleting the config item for encryption). 
 
 I.e. remove this if present:
  ```php
@@ -61,30 +61,30 @@ I.e. remove this if present:
  ]);
  ```
 
-Open up a normal terminal window in VSCode. If you closed the terminal window when you closed the MySQL terminal above, there should be a small screwdriver and wrench symbol at the bottom blue bar of your window on the left. Clicking on this will re-open the terminal.<br>
+12. Open up a normal terminal window in VSCode. If you closed the terminal window when you closed the MySQL terminal above, there should be a small screwdriver and wrench symbol at the bottom blue bar of your window on the left. Clicking on this will re-open the terminal.<br>
 To return the MySQL terminal to a normal terminal window look at the small menu on the right of the terminal window. There should be a wrench and screwdriver symbol with the name of your container next to it. If you hover over the name of the container a trash can symbol should appear. Clicking on this will return you to the normal terminal.
 
 ![Closing the MySQL Terminal](/assets/images/closing_mysql_shell.png)
 
 In the terminal window run ```chmod 777 -R cache/ storage/ uploads/```
 
-Attach a shell to the cmfive-boilerplate container. To do this go to the docker tab in VSCode.
+13. Attach a shell to the cmfive-boilerplate container. To do this go to the docker tab in VSCode.
 
 Right click the cmfive-boilerplate container (Under CONTAINERS and cmfive-boilerplate. The one called cmfive-boilerplate_webapp) and click ```Attach Shell```.
 
-Type the below command into the terminal.
+14. Type the below command into the terminal.
 ```sh
 php cmfive.php
 ```
-Running through commands 1-4 will get you set up and ready to go. Here is an explanation of each command.
-1. Will install any third party libraries Cmfive requires via Composer (the composer executable is bundled with the Boilerplate repo).
-2. Will install all Cmfive migrations.
-3. Will set up an administrator user, needed to log in to a new Cmfive install.
-4. Will generate encryption keys used by Cmfive.
+15. Running through commands 1-4 will get you set up and ready to go. Here is an explanation of each command:
+    1. Will install any third party libraries Cmfive requires via Composer (the composer executable is bundled with the Boilerplate repo).
+    2. Will install all Cmfive migrations.
+    3. Will set up an administrator user, needed to log in to a new Cmfive install.
+    4. Will generate encryption keys used by Cmfive.
 
-Open a new VSCode window that does not have a repository open in it. Go to the terminal. Choose View an Terminal from the toolbar menu if it does not automatically appear at the bottom of your new menu. This terminal should not be attached to any container, so it should have the name of your computer and no repository name after it.
+16. Open a new VSCode window that does not have a repository open in it. Go to the terminal. Choose View an Terminal from the toolbar menu if it does not automatically appear at the bottom of your new menu. This terminal should not be attached to any container, so it should have the name of your computer and no repository name after it.
 
-In this terminal run the following commands one at a time:
+17. In this terminal run the following commands one at a time:
 ```sh
 sudo chmod 777 -R storage/
 sudo chmod 777 -R cache/
@@ -95,7 +95,7 @@ To check it is working, open Cmfive in your browser, by right clicking the boile
 
 ![Login Page](/assets/images/cmfive_login.png)
 
-Make sure you can login and see the main index bar. If there are issues with this, open up your ```config.php``` file and append the following at the end of the file:
+17. Make sure you can login and see the main index bar. If there are issues with this, open up your ```config.php``` file and append the following at the end of the file:
  ```php
  Config::set('system.environment', 'development');
  ``` 
@@ -132,15 +132,15 @@ The output will give you a table of information about the user.
 
 ## Installation using CLI
 
-Clone the [Cmfive Boilerplate](https://github.com/2pisoftware/cmfive-boilerplate) repository using Git and navigate to it in your terminal of choice.
+1. Clone the [Cmfive Boilerplate](https://github.com/2pisoftware/cmfive-boilerplate) repository using Git and navigate to it in your terminal of choice.
 
-Run ```docker-compose up``` (This will take a while).
+2. Run ```docker-compose up``` (This will take a while).
 
-Check that you have 3 containers using ```docker ps```.
+3. Check that you have 3 containers using ```docker ps```.
 
-Connect to the database container by running ```docker exec -it mysql-5.7 bash``` (you will need to replace "5.7" with "8" if you are using Cmfive v5+). Connect to MySQL in the container by running ```mysql -u root -p``` with password ```root```.
+4. Connect to the database container by running ```docker exec -it mysql-5.7 bash``` (you will need to replace "5.7" with "8" if you are using Cmfive v5+). Connect to MySQL in the container by running ```mysql -u root -p``` with password ```root```.
 
-Run the following commands:
+5. un the following commands:
  - ```CREATE DATABASE cmfive;```
  - ```CREATE USER cmfive@'%' IDENTIFIED BY 'cmfive';```
  - ```GRANT ALL PRIVILEGES ON cmfive.* TO cmfive@'%';```
@@ -148,9 +148,9 @@ Run the following commands:
 
  You can now close the terminal window to this container or run ```exit``` twice to get back to your local CLI.
 
-Copy the ```config.php.example``` file to ```config.php``` and replace ```<username>```, ```<password>``` and ```<database>``` with ```cmfive```. Also replace "localhost" with the _name_ of your MySQL container, usually ```mysql-5.7``` or ```mysql-8``` depending on the version of Cmfive you are using.
+6. Copy the ```config.php.example``` file to ```config.php``` and replace ```<username>```, ```<password>``` and ```<database>``` with ```cmfive```. Also replace "localhost" with the _name_ of your MySQL container, usually ```mysql-5.7``` or ```mysql-8``` depending on the version of Cmfive you are using.
 
- While you are in the config, if the ```system.encryption``` config key exists, remove it. I.e. remove this if present:
+7. While you are in the config, if the ```system.encryption``` config key exists, remove it. I.e. remove this if present:
  ```php
  Config::set('system.encryption', [
      'key' => '',
@@ -158,24 +158,24 @@ Copy the ```config.php.example``` file to ```config.php``` and replace ```<usern
  ]);
  ```
 
- In your terminal window and run ```chmod 777 -R cache/ storage/ uploads/```.
+8. In your terminal window and run ```chmod 777 -R cache/ storage/ uploads/```.
 
- Connect to the PHP webserver container by running ```docker exec -it nginx-php7.4 bash``` (you will need to replace "7.4" with "8.1" if you are using Cmfive v5+).
+9. Connect to the PHP webserver container by running ```docker exec -it nginx-php7.4 bash``` (you will need to replace "7.4" with "8.1" if you are using Cmfive v5+).
 
- Run the following commands:
+10. Run the following commands:
  - ```php cmfive.php install core```
  - ```php cmfive.php install migrations```
  - ```php cmfive.php seed encryption```
  - ```php cmfive.php seed admin Admin Admin <your email> admin admin```
      - This will make an admin user with username and password ```admin```. If you do not want this instead run ```php cmfive.php```, enter option 3 and follow the prompts.
 
-     Make sure you remove any log files under ```./storage/log```.
+11. Make sure you remove any log files under ```./storage/log```.
 
- Run ```docker run -e 3000:3000``` and in your browser go to [http://localhost:3000/](http://localhost:3000/).
+12. Run ```docker run -e 3000:3000``` and in your browser go to [http://localhost:3000/](http://localhost:3000/).
 
  If all has gone well then you should see a login screen! But you'll notice you cannot log in, we have one more step to do.
 
-Open up your ```config.php``` file and append the following at the end of the file:
+13. Open up your ```config.php``` file and append the following at the end of the file:
  ```php
  Config::set('system.environment', 'development');
  ```
