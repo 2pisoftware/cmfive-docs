@@ -46,6 +46,8 @@ function edit_GET(Web $w)
     $w->out(Html::multiColForm($formData, 'edit'));
 }
 ```
+Note that we render the form without the template in the above 'out' function. This is because the form is the only thing displayed on the page. It is only a single HTML element which is to be rendered. When more than one HTML element is to be rendered we use the template, as seen i the last code block on this page.</br>
+
 Now that we have the form, let's add to the POST function where we will save the data to the database.
 ```php
 function edit_POST(Web $w)
@@ -100,4 +102,6 @@ function index_ALL(Web $w)
     $w->ctx('itemTable', Html::table($table,'item_table','tablesorter',$tableHeaders));
 }
 ```
+Here we use the 'ctx' function to send our table to the template. This is because the index page will display the item table, and the button to add a new item. When rendering two or more HTML elements, the template is useful as it gives us greater control.
+
 To view the table we need to add it to the index action template file.
