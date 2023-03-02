@@ -23,7 +23,7 @@ Cmfive caches config files to aid with page loading times. Changes to config fil
 
 ![Clear configuration cache](/assets/images/config_refresh.png)
 
-In the example module folder, create a file called config.php and insert the following text (this is differnt to the config.php file changed in the instructions under the installation menu).
+In the example module folder, create a file called config.php and insert the following text (this is different to the config.php file changed in the instructions under the installation menu).
 
 ```php
 <?php

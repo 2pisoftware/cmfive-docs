@@ -7,14 +7,14 @@ type: tute
 ## Permissions Error - I Can't Log In
 
 <!--check logs-->
-In the files tab go to /system/log. The log files record any errors that users encounter and can help us to see when they are cropping up. How to read the entries in the log files is explianed in the the [logs help page](logs).<br>
-The last file in the logs folder will have todays date. This is the one you want to check for the errors you just encountered. The most recent activtiy will be at the bottom of this file.
+In the files tab go to /system/log. The log files record any errors that users encounter and can help us to see when they are cropping up. How to read the entries in the log files is explained in the the [logs help page](logs).<br>
+The last file in the logs folder will have today's date. This is the one you want to check for the errors you just encountered. The most recent activity will be at the bottom of this file.
 <!--system/modules/auth/actions/login.php ha important info on logging in-->
 
 <!--Using inspect in Firefox. Look up for Windows and Linux as well as Mac-->
 Now we need to inspect the element.<br>
 Firefox users right click and choose Inspect at the bottom of the pop-up.<br>
-Safari users right click and choose Inspect Elemment at the bottom of the pop-up.
+Safari users right click and choose Inspect Element at the bottom of the pop-up.
 
 <!--delete config cache after changing config-->
 You will need to purge the config cache after making changes to the configuration file. you can see how to do this on the Creating a Config page under the Learning Cmfive menu.
