@@ -2,7 +2,7 @@ name: CI
 
 on:
   push:
-    branches: [ master ]
+    branches: [ master, develop ]
   pull_request:
     branches: [ master ]
 
@@ -12,4 +12,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - uses: rojopolis/spellcheck-github-actions@0.22.1
+    - uses: rojopolis/spellcheck-github-actions@v0

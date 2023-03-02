@@ -78,7 +78,7 @@ function edit_POST(Web $w)
 We can now make changes to our existing items. Test this by changing some of the values of the items in your list.
 
 Our next task will be to create the delete action that will remove items from our list. <br>
-Create a new file in actions/item called delete.php and add the following code.
+Create a new file in actions/item called delete.php. The delete button we added to our item list in [Creating Item Action](creating-item-action). Add the following code to your new file.
 ```php
 <?php
 
@@ -97,7 +97,6 @@ function delete_ALL(Web $w)
     if (empty($item)) {
         // no item found so let the user know
         $w->error('No item found for id','example');
-        ctxService::getInstance($w)->error("No item found for id","example");
     }
     // delete the item
     $item->delete();
@@ -105,3 +104,5 @@ function delete_ALL(Web $w)
     $w->msg('Item deleted','example');
 }
 ```
+
+Save this action, and test it by going to your item list and clicking the delete button next to one of your items.

@@ -8,7 +8,7 @@ type: tute
 
 The Install folder holds the scripts required for all installation needs of the module. These may be database migrations, database seeds, report sql files, templates, and others.
 
-Migrations are used to make changes to the database structure. Migration files are generated through the UI and are timestamped to ensure they run in the correct order.
+Migrations are used to make changes to the database structure (i.e. tables). Migration files are generated through the UI and are timestamped (the year, month, day, and time to the second. It will look something like 20210721022033) to ensure they run in the correct order. These timestamps allow us to rollback and run migrations in order as needed.
 
 ```php
 public function up()
@@ -80,6 +80,7 @@ public function up()
     }
 }
 ```
+<!-- Add table prefix, data type, explanation for each column type. Add a few more than what we have above -->
 It is important to ensure that your migration undoes any database changes in the down function. In this case we have created a table in our up function so we will remove it in our down function.
 ```php
 public function down()

@@ -27,6 +27,7 @@ Right-click on the ```docker-compose.yml``` file and select ```Compose Up``` (Th
 
 #### Step 4 - Verify
 When docker compose has finished, check that you have 3 containers ready by clicking on the Docker tab on the left
+![Docker Tab](/assets/images/docker.png)
 
 #### Step 5 - Connect to database container
 Right click on the MySQL container and click ```Attach Shell```. Connect to MySQL in the container by running ```mysql -u root -p``` with password ```root```
@@ -49,6 +50,11 @@ Config::set('system.encryption', [
     'key' => '',
     'iv'  => ''
 ]);
+```
+The system environment section of this file should be set to development.
+
+```php
+Config::set('system.environment', 'development');
 ```
 
 #### Step 8 - Connect to PHP container
@@ -141,3 +147,36 @@ Config::set('system.environment', 'development');
 ```
 
 You should now be able to log in
+
+## Trouble Shooting 
+
+If you still have trouble logging in, check some of the commands under MySQL Users in the Database below to make sure the correct user is set, and has all their permissions.
+
+Please check out the Help pages for further support. Some operating systems may run into further issues and we can't always offer support.
+
+## MySQL Users in the Database
+
+The following command will show you the change owner options.
+```bash
+chown --help
+```
+
+To change the owner and group for all of the files:
+```bash
+chown -R www-data:www-data storage/
+```
+
+Copy the following bash commands into your terminal one at a time and click enter.
+
+```bash
+use cmfive;
+```
+
+```bash
+MySQL> select * from user;
+```
+
+The ‘*’ means ‘all’, so you are asking to see all the information on the current user. 
+
+The output will give you a table of information about the user. 
+
