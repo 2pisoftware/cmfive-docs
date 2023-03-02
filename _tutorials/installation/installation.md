@@ -29,7 +29,6 @@ Right-click on the ```docker-compose.yml``` file and select ```Compose Up``` (Th
 When docker compose has finished, check that you have 3 containers ready by clicking on the Docker tab on the left
 ![Docker Tab](/assets/images/docker.png)
 
-
 #### Step 5 - Connect to database container
 Right click on the MySQL container and click ```Attach Shell```. Connect to MySQL in the container by running ```mysql -u root -p``` with password ```root```
 
@@ -52,12 +51,11 @@ Config::set('system.encryption', [
     'iv'  => ''
 ]);
 ```
-The system environment section of this file should be set ot development.
+The system environment section of this file should be set to development.
+
 ```php
 Config::set('system.environment', 'development');
 ```
-
-
 
 #### Step 8 - Connect to PHP container
 Right click on the ```nginx-php``` container and click ```Attach Shell```.
