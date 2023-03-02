@@ -80,11 +80,11 @@ if (!$data) {
             
             foreach ($data as $datarow) {
                 $row = [];
-                $row['Module'] = $datarow->module;
-                $row['URL'] = $datarow->path;
-                $row['Class'] = $datarow->db_class;
-                $row['Action'] = $datarow->db_action;
-                $row['DB_Id'] = $datarow->db_id;
+                $row['module'] = $datarow->module;
+                $row['url'] = $datarow->path;
+                $row['class'] = $datarow->db_class;
+                $row['action'] = $datarow->db_action;
+                $row['db_id'] = $datarow->db_id;
                 $convertedData[] = $row;
             }
              $results[] = new InsightReportInterface('Example Report', ['Module', 'URL', 'Class', 'Action', 'DB Id'], $convertedData);
