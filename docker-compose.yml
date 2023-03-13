@@ -46,8 +46,8 @@ services:
   jekyll:
     image: jekyll/jekyll:4.0.1
     hostname: jekyll  
-    #ports:
-      #- '4000:4000'
+    ports:
+      - '4000:4000'
     networks:
       doc_app_net:
         ipv4_address: 172.20.238.80
