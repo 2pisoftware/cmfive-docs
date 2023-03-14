@@ -19,7 +19,7 @@ function edit_GET(Web $w)
 
 function edit_POST(Web $w)
 {
-    
+
 }
 ```
 Let's continue by focussing on the GET method. <br />

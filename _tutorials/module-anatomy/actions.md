@@ -80,7 +80,6 @@ function edit_GET(Web $w)
 
     // sending the form to the 'out' function bypasses the template.
     $w->out(Html::multiColForm($formData, 'example-item/edit'));
-
 }
 ```
 Now that we have the form, let's add to the POST function where we will save the data to the database.
