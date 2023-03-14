@@ -18,19 +18,22 @@ Open the file and add the class definition.
 ```php
 <?php
 
-class ExampleService extends DbService {
+class ExampleService extends DbService
+{
 
 }
 ```
 Let's add two functions to our service class that will be used to retrieve data for our example items. These functions will use GetObject functions from Cmfive's DbService class. Add these functions to the service class.
 ```php
 // returns all example item instances
-public function GetAllItems() {
+public function GetAllItems()
+{
     return $this->GetObjects('ExampleItem',['is_deleted'=>0]);
 }
 
 // returns a single example item matching the given id
-public function GetItemForId($id) {
+public function GetItemForId($id)
+{
     return $this->GetObject('ExampleItem',$id);
 }
 ```
@@ -41,13 +44,12 @@ Let's start defining our model properties in our 'ExampleItem.php' file.
 ```php
 <?php
 
-class ExampleItem extends DbObject {
-
+class ExampleItem extends DbObject
+{
     public $name;
     public $is_checked;
     public $dt_started;
     public $my_integer;
-
 }
 ```
 The model properties must be named according to the column names on the database table.

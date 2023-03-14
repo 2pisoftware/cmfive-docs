@@ -63,7 +63,7 @@ public function up()
 	$column = parent::Column();
     	$column->setName('id')
         	->setType('biginteger')
-            	->setIdentity(true);
+            ->setIdentity(true);
 
     	if (!$this->hasTable("example_item")) { //it can be helpful to check that the table name is not used
         	$this->table("example_item", [ // table names should be appended with 'ModuleName_'

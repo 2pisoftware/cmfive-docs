@@ -52,13 +52,12 @@ Let's use the migration to add a database table for our module by editing the up
 ```php
 public function up()
 {
-		// UP
-		$column = parent::Column();
-		$column->setName('id')
-				->setType('biginteger')
-				->setIdentity(true);
-
-    }
+	// UP
+	$column = parent::Column();
+	$column->setName('id')
+			->setType('biginteger')
+			->setIdentity(true);
+}
 ```
 The function already contains some code. This is the definition for the id column that each table will need. Let's now define a table for an example item that we want to store data against.
 ```php

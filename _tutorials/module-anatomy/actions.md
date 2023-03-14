@@ -12,7 +12,8 @@ The following example is of an index action located in module_folder -> actions 
 ```php
 <?php
 
-function index_ALL(Web $w) {
+function index_ALL(Web $w)
+{
 
 }
 ```
@@ -28,10 +29,9 @@ Create a new file in the actions folder and call it 'index.php' and copy the cod
 ```php
 <?php
 
-function index_ALL(Web $w) {
-
+function index_ALL(Web $w)
+{
     $w->ctx("title", "Example Module");
-
 }
 ```
 The code above we use the 'ctx' or context function on our Web object to set the title for our index action. Our index action is now accessible through the Cmfive UI, click on the 'Example' menu item in Cmfive to view the index action.
@@ -48,10 +48,12 @@ Now create a new file in our 'item' submodule and call it 'edit.php'. In this fi
 
 function edit_GET(Web $w)
 {
+
 }
 
 function edit_POST(Web $w)
 {
+
 }
 ```
 Let's continue by focussing on the GET method. <br />
