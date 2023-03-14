@@ -67,15 +67,15 @@ public function up()
 
     if (!$this->hasTable("example_item")) { //it can be helpful to check that the table name is not used
         $this->table("example_item", [ // table names should be appended with 'ModuleName_'
-            "id" => false,
-            "primary_key" => "id"
-        ])->addColumn($column) // add the id column
-        ->addStringColumn('name')
-        ->addBooleanColumn('is_checked') //boolean columns need to be appended with 'is_'
-        ->addDateTimeColumn('dt_started') // Datetime columns need to be appended with 'dt_'
-        ->addIntegerColumn('my_integer')
-        ->addCmfiveParameters() // this function adds some standard columns used in cmfive. dt_created, dt_modified, creator_id, modifier_id, and is_deleted.
-        ->create();
+                "id" => false,
+                "primary_key" => "id"
+            ])->addColumn($column) // add the id column
+            ->addStringColumn('name')
+            ->addBooleanColumn('is_checked') //boolean columns need to be appended with 'is_'
+            ->addDateTimeColumn('dt_started') // Datetime columns need to be appended with 'dt_'
+            ->addIntegerColumn('my_integer')
+            ->addCmfiveParameters() // this function adds some standard columns used in cmfive. dt_created, dt_modified, creator_id, modifier_id, and is_deleted.
+            ->create();
     }
 }
 ```
