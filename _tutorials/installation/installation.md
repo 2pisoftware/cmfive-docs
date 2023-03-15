@@ -25,8 +25,10 @@ Install the Docker extension by Microsoft (extension ID: ```ms-azuretools.vscode
 #### Step 3 - Building the containers
 Right-click on the ```docker-compose.yml``` file and select ```Compose Up``` (This will take a while)
 
+[comment]: # (Docker Tab image has an extra line of whitespace before it, otherwise it renders inline with the text)
 #### Step 4 - Verify
-When docker compose has finished, check that you have 3 containers ready by clicking on the Docker tab on the left
+When docker compose has finished, check that you have 3 containers ready by clicking on the Docker tab on the left.
+
 ![Docker Tab](/assets/images/docker.png)
 
 #### Step 5 - Connect to database container
