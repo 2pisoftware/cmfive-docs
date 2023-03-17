@@ -13,9 +13,12 @@ The insight's class will be the sort of insight it is, followed by Insight (e.g.
 
 ```php
 class ExampleInsight extends InsightBaseClass
+{
+
+}
 ```
 
-Below this, give the variables for the insight's name and description. These will appear in the insight list, the first page seen in CMFive when you click on the insight module.
+In this class, add the variables below for the insight's name and description. These will appear in the insight list, the first page seen in CMFive when you click on the insight module.
 
 ```php
 public $name = "Example Insight";
@@ -26,72 +29,71 @@ These variables will indicate to users which insight is which.
 All insights will contain a getFilters function and a run function. The getFilters function will be called when a user clicks on the View button next to the insight. The run function is called when the user clicks Run from the view screen.
 
 getFilters will be an array, which sets up the parameters the user can choose. Before running an insight, the user may specify it to only show information from specific dates, for certain users, etc.<br>
-Add the below code underneath your name and description variables.
+Add the function below to your ExampleInsight class.
 
 ```php
 public function getFilters(Web $w, $parameters = []): array
 {
+
+}
 ```
 
 The filters you choose for the user to select from will depend on the insight you are creating.<br>
-The below code shows the code that goes in your getFilters function. This example has filters for choosing the date to and from that the insight shows.
-
+The code shown below goes in your getFilters function. It is what generates the filter options the user may choose from. This example has filters for choosing the date to and from that the insight shows.
 ```php
-    return [
-                "Options" => [
-                    [
-                        [
-                            "Date From", "date", "dt_from", array_key_exists('dt_from', $parameters) ? $parameters['dt_from'] : null
-                        ],
-                        [
-                            "Date To", "date", "dt_to", array_key_exists('dt_to', $parameters) ? $parameters['dt_to'] : null
-                        ],
-                    ]
-                ]
-            ];
-}
+return [
+    "Options" => [
+        [
+            [
+                "Date From", "date", "dt_from", array_key_exists('dt_from', $parameters) ? $parameters['dt_from'] : null
+            ],
+            [
+                "Date To", "date", "dt_to", array_key_exists('dt_to', $parameters) ? $parameters['dt_to'] : null
+            ],
+        ]
+    ]
+];
 ```
 
 You will notice that both filters contain an array_key_exists function. This is required on all filters in your insight. When you click the Change Insight Parameters button, the options you chose that session previously will be pre-filled for you.
 
 The run function will also be an array. It will find data based on the selected filters and then organise it into the appropriate columns for each table in the insight.<br>
-Place the below code under your getFilters function.
-
+Add the following function after your getFilters function.
 ```php
 public function run(Web $w, $parameters = []): array
 {
-```
-First, the insight finds the correct data based on the filters you have chosen. The data variable for our Example Insight will look like the code below.
 
+}
+```
+
+First, the insight finds the correct data based on the filters you have chosen. Add the following code to the run function to get the relevant data for our example insight.
 ```php
 $data = ExampleService::getInstance($w)->getExamples(($parameters['dt_from']), ($parameters['dt_to']));
 ```
 
 The getExamples function refers to a where array. In most cases you will not have to build one. Variables for all your data required for your insights tables can usually be created using existing service functions.
 
-After retrieving the data based on the selected filters, your run function must build its table(s). It will look something like this.
-
+After retrieving the data based on the selected filters, your run function must build its table(s). For our example, add the following code to the run function.
 ```php
 if (!$data) {
-             $results[] = new InsightReportInterface('Example Report', ['Results'], [['No data returned for selections']]);
-        } else {
-            // convert $data from list of objects to array of values
-            $convertedData = [];
+    $results[] = new InsightReportInterface('Example Report', ['Results'], [['No data returned for selections']]);
+} else {
+    // convert $data from list of objects to array of values
+    $convertedData = [];
             
-            foreach ($data as $datarow) {
-                $row = [];
-                $row['module'] = $datarow->module;
-                $row['url'] = $datarow->path;
-                $row['class'] = $datarow->db_class;
-                $row['action'] = $datarow->db_action;
-                $row['db_id'] = $datarow->db_id;
-                $convertedData[] = $row;
-            }
-             $results[] = new InsightReportInterface('Example Report', ['Module', 'URL', 'Class', 'Action', 'DB Id'], $convertedData);
-        }
-        return $results;
+    foreach ($data as $datarow) {
+        $row = [];
+        $row['module'] = $datarow->module;
+        $row['url'] = $datarow->path;
+        $row['class'] = $datarow->db_class;
+        $row['action'] = $datarow->db_action;
+        $row['db_id'] = $datarow->db_id;
+        $convertedData[] = $row;
     }
+    $results[] = new InsightReportInterface('Example Report', ['Module', 'URL', 'Class', 'Action', 'DB Id'], $convertedData);
 }
+
+return $results;
 ```
 
 The first few rows indicate what the insight will display if no data comes back.<br>
