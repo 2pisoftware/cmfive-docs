@@ -7,8 +7,6 @@ type: tute
 
 ## Adding The Item Table to The Index Template
 
-Adding the item table to the index template.
-
 Open templates/index.tpl.php and add the line `echo $itemTable;`. Your templates/index.tpl.php file should now look like this:
 ```php
 <?php
