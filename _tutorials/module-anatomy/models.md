@@ -22,6 +22,7 @@ Open the file and add the class definition.
 
 class ExampleService extends DbService
 {
+    
 }
 ```
 Let's add two functions to our service class that will be used to retrieve data for our example items. These functions will use GetObject functions from Cmfive's DbService class. Add these functions to the service class.

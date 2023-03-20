@@ -14,6 +14,7 @@ The following example is of an index action located in module_folder -> actions 
 
 function index_ALL(Web $w)
 {
+
 }
 ```
 The function name before the underscore must match the file name. This is followed by the method, GET, POST or ALL. Finally, all actions need to be passed the Web $w object.

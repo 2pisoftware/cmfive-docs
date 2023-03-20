@@ -14,10 +14,12 @@ Now create a new file in our 'item' submodule and call it 'edit.php'. In this fi
 
 function edit_GET(Web $w)
 {
+
 }
 
 function edit_POST(Web $w)
 {
+
 }
 ```
 Let's continue by focussing on the GET method. <br />
@@ -46,7 +48,7 @@ function edit_GET(Web $w)
     $w->out(Html::multiColForm($formData, 'edit'));
 }
 ```
-Note that we render the form without the template in the above 'out' function. This is because the form is the only thing displayed on the page. It is only a single HTML element which is to be rendered. When more than one HTML element is to be rendered we use the template, as seen i the last code block on this page.</br>
+Note that we render the form without the template in the above 'out' function. This is because the form is the only thing displayed on the page. It is only a single HTML element which is to be rendered. When more than one HTML element is to be rendered we use the template, as seen in the last code block on this page.<br />
 
 Now that we have the form, let's add to the POST function where we will save the data to the database.
 ```php

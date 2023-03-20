@@ -8,6 +8,7 @@ type: tute
 
 ```php
 <?php
+
 Config::set('MODULE_NAME', [
     'active' => true,
     'path' => 'modules',
@@ -27,6 +28,7 @@ In the example module folder, create a file called config.php and insert the fol
 
 ```php
 <?php
+
 Config::set('example', [
     'active' => true,
     'path' => 'modules',
