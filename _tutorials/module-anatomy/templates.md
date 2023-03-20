@@ -23,10 +23,12 @@ Now refresh the example index page to view the button. Notice that the URL uses 
 
 Adding the item table to the index template.
 
-Open templates/index.tpl.php and add the following lines.
+Open templates/index.tpl.php and modify it so it looks like this:
 ```php
-<?php echo Html::b("example-item/edit","Add new item"); ?>
-<?php echo $itemTable; ?>
+<?php
+
+echo Html::b("example-item/edit","Add new item");
+echo $itemTable;
 ```
 The item table is now visible on the index action. Use the add new item button to add a few more items to the table.<br />
 Now we need to get our item action buttons to work properly. We will do this back in the actions section. Resume the actions tutorial [here](actions#tutorial-part-3)

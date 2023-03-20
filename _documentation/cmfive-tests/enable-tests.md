@@ -15,13 +15,14 @@ Enabling the test framework is simple. Edit the file:
 cmfive-boilerplate/config.php
 ```
 Update the 'testrunner' setting to 'ENABLED'.
+
 ```php
 //========== TestRunner Configuration ==========================
 //========== must be "ENABLED" to run ==========================
 //========== "config" will pass through to CmfiveSite helper ===
 Config::append("tests", array(
-	"testrunner"  =>  "ENABLED" ,
-		'config' => [ ]
+    "testrunner"  =>  "ENABLED",
+    'config' => [ ]
 ));
 ```
 The Cmfive test libraries do not need any extra entries to be added in the TestRunner 'config' array setting.

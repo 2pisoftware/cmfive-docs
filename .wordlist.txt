@@ -254,3 +254,4 @@ WSL
 webserver
 theModelsFolder
 DBObject
+InsightBaseClass
