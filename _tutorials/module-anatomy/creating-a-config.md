@@ -18,7 +18,7 @@ Config::set('MODULE_NAME', [
 
 The module config can be used to set a variety of system options as well as any custom module specific options.
 
-The items shown are the minimum required to achieve a functioning module.
+The items shown are the minimum required within the config file to achieve a functioning module. You will also need to create a directory caleld modules/ within the example directory you created before.
 
 Cmfive caches config files to aid with page loading times. Changes to config files will require the config cache to be purged and re-written. To purge the config cache click the 'clear configuration cache' button on the cmfive menu.
 
@@ -35,6 +35,8 @@ Config::set('example', [
     'topmenu' => true,
 ]);
 ```
+
+Ensure you have created the modules/ directory, if not do this now.
 
 Now clear the config cache and refresh the browser window. You should now see a menu item called 'example'.
 
