@@ -8,9 +8,9 @@ type: tute
 
 Models is where we store class definitions. These usually relate to our database tables but also includes a module service class for holding module level functions.
 
-Let's create our models folder, our example service class and a model for our example item.
+Within our newly created models directory let's create, our example service class and a model for our example item.
 
-In our example module, create a folder called 'models'.
+In our example module, there should be a directory titled 'models' that we created in the last step. If not create this now.
 
 Now let's make our service class for our module. <br />
 In the models folder create a new file called 'ExampleService.php'. All files in the models folder need to be named using camel case and have the module name prepended.<br />
