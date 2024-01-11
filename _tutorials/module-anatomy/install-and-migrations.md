@@ -55,24 +55,16 @@ public function up()
         ->setIdentity(true);
 }
 ```
-The function already contains some code. This is the definition for the id column that each table will need. Let's now define a table for an example item that we want to store data against.
+The function already contains some code. This is the definition for the id column that each table will need. Feel free to remove this code, cmfive has a function tableWithId() that abstracts this functionality away for us! Let's now define a table for an example item that we want to store data against.
 ```php
 public function up()
 {
     // UP
-    $column = parent::Column();
-    $column->setName('id')
-        ->setType('biginteger')
-        ->setIdentity(true);
-
-    if (!$this->hasTable("example_item")) { //it can be helpful to check that the table name is not used
-        $this->table("example_item", [ // table names should be appended with 'ModuleName_'
-                "id" => false,
-                "primary_key" => "id"
-            ])->addColumn($column) // add the id column
+    if (!$this->hasTable('example_item')) {
+        $this->tableWithId('example_item') // this creates the table and a column, id, as the primary key
             ->addStringColumn('name')
-            ->addBooleanColumn('is_checked') //boolean columns need to be appended with 'is_'
-            ->addDateTimeColumn('dt_started') // Datetime columns need to be appended with 'dt_'
+            ->addBooleanColumn('is_checked') // boolean columns need to be appended with 'is_'
+            ->addDateTimeColumn('dt_started') // datetime columns need to be appended with 'dt_'
             ->addIntegerColumn('my_integer')
             ->addCmfiveParameters() // this function adds some standard columns used in cmfive. dt_created, dt_modified, creator_id, modifier_id, and is_deleted.
             ->create();
@@ -90,7 +82,9 @@ public function down()
 ```
 Now that we have created our migration we can run it using the Cmfive UI. <br />
 In the browser, navigate to the Cmfive migrations page, view by individual modules, find the example module and click either 'run all example migrations' or 'migrate to here' on our migration.<br />
+
 After running the migration we can verify that the table was created in the database. <br />
+
 To roll back we can click 'rollback to here' next to our migration. This will run the down function and the table will be removed.
 
-Make sure the migration is run and we can now look at creating our item model and our module service class.
+Make sure the migration ran successfully, then move on to creating our item model and our module service class.
